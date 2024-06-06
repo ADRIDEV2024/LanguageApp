@@ -1,7 +1,5 @@
 
-{% extends 'base.html' %}
-{% block title %}Community Posts - LanguageApp{% endblock %}
-{% block content %}
+
   <section class="container my-4">
     <h2>Community Posts</h2> 
     <ul>
@@ -13,6 +11,6 @@
         </li>
       {% endfor %}
     </ul>
-    <a href="{%url'create_community_post'%}">Create a New Post</a>
+    <a href="{%url 'create_community_post' %}">Create a New Post</a>
   </section>
 {% endblock %}
