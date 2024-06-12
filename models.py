@@ -6,11 +6,7 @@ class UserProfile(models.Model):
     full_name = models.CharField(max_length=50, default="")
     password = models.CharField(max_length=100,default="")
     Email=models.EmailField(max_length=100)
-    language_level_choices = [
-        ('beginner', 'Beginner'),
-        ('intermediate', 'Intermediate'),
-        ('advanced', 'Advanced'),
-    ]
+    language_level_choices = 
     language_level = models.CharField(max_length=25, choices=language_level_choices)
     
     # New fields for progress tracking and personalization
@@ -28,8 +24,8 @@ class Lesson(models.Model):
         ('medium', 'Medium'),
         ('hard', 'Hard'),
     ]
-    difficulty = models.CharField(max_length=20, choices=difficulty_choices)
-    created_at = models.DateTimeField(auto_now_add=True)
+   # difficulty = models.CharField(max_length=20, choices=difficulty_choices)
+   # created_at = models.DateTimeField(auto_now_add=True)
     
      # New field for tags or categories
     tags = models.ManyToManyField('LessonTag', blank=True)
