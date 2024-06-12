@@ -28,8 +28,8 @@ class Lesson(models.Model):
         ('medium', 'Medium'),
         ('hard', 'Hard'),
     ]
-   # difficulty = models.CharField(max_length=20, choices=difficulty_choices)
-   # created_at = models.DateTimeField(auto_now_add=True)
+   difficulty = models.CharField(max_length=20, choices=difficulty_choices)
+   created_at = models.DateTimeField(auto_now_add=True)
     
      # New field for tags or categories
     tags = models.ManyToManyField('LessonTag', blank=True)
@@ -39,12 +39,15 @@ class Lesson(models.Model):
 class LessonTag(models.Model):
     name = models.CharField(max_length=50)
 
-  
+   def __str__(self):
+        return self.name
+       
 class Language(models.Model):
     name = models.CharField(max_length=50)
 
     def __str__(self):
         return self.name
+        
 class UserLanguage(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     language = models.ForeignKey(Language, on_delete=models.CASCADE)
