@@ -38,8 +38,8 @@ class LessonsForm(forms.ModelForm):
     content = forms.CharField(widget=forms.Textarea(
         attrs={'placeholder': 'Enter the lesson content'}))
     
-    difficulty = forms.ChoiceField(choices=Lesson.difficulty_choices)
-    tags = forms.ModelMultipleChoiceField(queryset=LessonTag.objects.all(), widget=forms.CheckboxSelectMultiple)
+   # difficulty = forms.ChoiceField(choices=Lesson.difficulty_choices)
+   # tags = forms.ModelMultipleChoiceField(queryset=LessonTag.objects.all(), widget=forms.CheckboxSelectMultiple)
     
 class LanguageForm(forms.ModelForm):
      class Meta:
