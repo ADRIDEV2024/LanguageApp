@@ -6,7 +6,11 @@ class UserProfile(models.Model):
     full_name = models.CharField(max_length=50, default="")
     password = models.CharField(max_length=100,default="")
     Email=models.EmailField(max_length=100)
-    language_level_choices = 
+    language_level_choices = [
+        ('beginner', 'Beginner'),
+        ('intermediate', 'Intermediate'),
+        ('advanced', 'Advanced'),
+    ]
     language_level = models.CharField(max_length=25, choices=language_level_choices)
     
     # New fields for progress tracking and personalization
@@ -35,8 +39,7 @@ class Lesson(models.Model):
 class LessonTag(models.Model):
     name = models.CharField(max_length=50)
 
-    def __str__(self):
-        return self.name
+  
 class Language(models.Model):
     name = models.CharField(max_length=50)
 
