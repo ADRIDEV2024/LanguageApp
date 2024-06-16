@@ -30,6 +30,15 @@ def dashboard(request):
         "favorite_language": favorite_language
     }
     return render(request, "dashboard.html", context)
+    
+    def communityposts(request):
+    posts = CommunityPost.objects.all()
+    return render(request, "community_posts.html", {"posts": posts})
+
+    def updateprofile(request):
+    user_profile = UserProfile.objects.get(user=request.user)
+    user_languages = UserLanguage.objects.filter(user=request.user)
+    
 
 
     if request.method == 'POST':
