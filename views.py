@@ -31,14 +31,7 @@ def dashboard(request):
     }
     return render(request, "dashboard.html", context)
 
-def communityposts(request):
-    posts = CommunityPost.objects.all()
-    return render(request, "community_posts.html", {"posts": posts})
 
-def updateprofile(request):
-    user_profile = UserProfile.objects.get(user=request.user)
-    user_languages = UserLanguage.objects.filter(user=request.user)
-    
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=user_profile)
         if form.is_valid():
