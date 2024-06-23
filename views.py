@@ -41,13 +41,13 @@ def dashboard(request):
 
 
     if request.method == 'POST':
-        form = UserProfileForm(request.POST, instance=user_profile)
+        form = UserProfileForm(request.POST)
         if form.is_valid():
             form.save()
     # Redirect to the index page after succesfull form submission
         return redirect("index")
     else:
-        form = UserProfileForm(instance=user_profile)
+        form = UserProfileForm()
         context = {
             "form": form,
         }
@@ -62,9 +62,7 @@ def addlesson(request):
         return redirect("update_profile")
     else:
         form = LessonsForm()
-        context = {
-            "form": form,
-        }
+        context = {"form": form}
         return render(request, "add_lesson.html", context)
     
 def create_community_post(request):
