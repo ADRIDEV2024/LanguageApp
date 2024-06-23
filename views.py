@@ -132,7 +132,7 @@ def signup(request):
                     email=request.POST['email'])
                  
 def lesson_detail(request, lesson_id):
-    lesson = get_object_or_404(Lesson)
+    lesson = get_object_or_404(Lesson, pk=lesson_id)
 
     # Track user progress
     user_profile = UserProfile.objects.get(user=request.user)
