@@ -123,7 +123,7 @@ def signup(request):
             try:
                 user = User.objects.get(username=request.POST['username'])
                 if user:
-                    messages.error(request, 'Username already exists!')
+                    messages.info(request, 'Username already exists!')
                     return render(request, 'signup.html')
             except User.DoesNotExist:
                  user = User.objects.create_user(
@@ -135,7 +135,7 @@ def lesson_detail(request, lesson_id):
     lesson = get_object_or_404(Lesson, pk=lesson_id)
 
     # Track user progress
-    user_profile = UserProfile.objects.get(user=request.user)
+    user_profile = UserProfile.objects.get(user=request.get)
     user_profile.completed_lessons.add(lesson)
     return render(request, "lessons_detail.html", {"lesson": lesson})
 
