@@ -41,16 +41,14 @@ def dashboard(request):
 
 
     if request.method == 'POST':
-        form = UserProfileForm(request.POST)
+        form = UserProfileForm(request.POST, instance=user_profile)
         if form.is_valid():
             form.save()
     # Redirect to the index page after succesfull form submission
         return redirect("index")
     else:
         form = UserProfileForm()
-        context = {
-            "form": form,
-        }
+        context = {"form": form}
         return render(request, "update_profile.html", context)
     
 def addlesson(request):
