@@ -50,6 +50,9 @@ class FavoriteLanguageForm(forms.ModelForm):
     class Meta:
         model = Language
         fields = ['name']
+    title = forms.CharField(widget=forms.TextInput(
+        attrs={'placeholder': 'Enter your favourite language'}))
+    content = forms.CharField(widget=forms.Textarea(
         attrs={'placeholder': 'Enter the your favourite language'}))
 
 class LessonTagForm(forms.ModelForm):
