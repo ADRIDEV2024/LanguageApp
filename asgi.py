@@ -7,4 +7,4 @@ django_asgi_app = get_asgi_application()
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "LanguageApp.settings")
 application = ProtocolTypeRouter({ "http": django_asgi_app,})
 
-ASGI_APPLICATION = 'LanguageApp.asgi.application'
+ASGI_APPLICATION = ''
