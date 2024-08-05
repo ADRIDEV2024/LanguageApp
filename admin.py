@@ -9,4 +9,4 @@ admin.site.register(LessonTag)
 admin.site.register(CommunityPost)
 admin.site.register(Dashboard)
 admin.site.register(UpdateProfile)
-admin.site.register(Settings)
+
