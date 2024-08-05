@@ -8,5 +8,5 @@ admin.site.register(UserLanguage)
 admin.site.register(LessonTag)
 admin.site.register(CommunityPost)
 admin.site.register(Dashboard)
-admin.site.register(UpdateProfile)
+
 
