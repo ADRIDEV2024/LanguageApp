@@ -6,6 +6,6 @@ django_wsgi_app = get_wsgi_application()
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "LanguageApp.settings")
 
-#application = ProtocolTypeRouter({ "http": django_wsgi_app,})
+application = ProtocolTypeRouter({ "http": django_wsgi_app,})
 
 WSGI_APPLICATION = 'LanguageApp.wsgi.application'
