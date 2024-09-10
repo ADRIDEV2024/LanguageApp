@@ -1,6 +1,6 @@
 # LanguageApp
 
-![Idiomas-del-mundo](https://github.com/ADRIDEV2024/LanguageApp/assets/163412333/d2ce8d31-e7de-4b4c-858e-09707a80a56e)
+![Idiomas](https://github.com/ADRIDEV2024/LanguageApp/assets/163412333/d2ce8d31-e7de-4b4c-858e-09707a80a56e)
 
 
 En este proyecto Django he programado una aplicación web🌐 específica para aprender idiomas💬, siguiendo la ruta de aprendizaje para cada usuario según el lenguaje elegido y su nivel de dificultad.Entre otras operaciones,he utilizado numerosos formularios cada uno con una funcionalidad única así como un robusto sistema de autenticación🔐 y plantillas bien estructuradas para representar cada comportamiento o evento que tenga lugar en la interfaz.
