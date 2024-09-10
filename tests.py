@@ -1,3 +1,3 @@
 import unittest
 
-class TestMyFunction(unittest.TestCase):
+class TestFunction(unittest.TestCase):
