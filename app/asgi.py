@@ -9,3 +9,4 @@ application = ProtocolTypeRouter({"http": django_asgi_app,})
 
 ASGI_APPLICATION = 'LanguageApp.asgi.application'
 
+
