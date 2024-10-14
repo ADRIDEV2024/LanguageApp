@@ -14,4 +14,4 @@ urlpatterns = [
     path("language/<int:language_id>/", views.language, name="language"),
     path("lessons_detail/<int:lesson_id>/", views.lesson_detail, name="lesson_detail"),
     path("create_community_post/", views.create_community_post, name="create_community_post"),
-]
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
