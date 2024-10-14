@@ -12,7 +12,11 @@ class UserProfileAdmin(admin.ModelAdmin):
     list_display = ('user', 'bio', 'location', 'birth_date')
     search_fields = ('user__username', 'bio')
     ordering = ('user',)
-
+    
+class LanguageAdmin(admin.ModelAdmin):
+    list_display = ('name', 'code')
+    search_fields = ('name',)
+    
 admin.site.register(Lesson, LessonAdmin)
 admin.site.register(UserProfile, UserProfileAdmin)
 admin.site.register(Language, LanguageAdmin)
