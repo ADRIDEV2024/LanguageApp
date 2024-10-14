@@ -26,6 +26,12 @@ class LessonTagAdmin(admin.ModelAdmin):
     list_display = ('name',)
     search_fields = ('name',)
 
+class CommunityPostAdmin(admin.ModelAdmin):
+    list_display = ('title', 'author', 'created_at')
+    list_filter = ('created_at',)
+    search_fields = ('title', 'content')
+    date_hierarchy = 'created_at'
+
 admin.site.register(Lesson, LessonAdmin)
 admin.site.register(UserProfile, UserProfileAdmin)
 admin.site.register(Language, LanguageAdmin)
