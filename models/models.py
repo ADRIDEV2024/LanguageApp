@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     full_name = models.CharField(max_length=50, default="")
-    password = models.CharField(max_length=100,default="")
+    password = models.CharField(max_length=20,default="")
     Email=models.EmailField(max_length=100)
     language_level_choices = [
         ('beginner', 'Beginner'),
