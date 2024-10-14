@@ -7,7 +7,12 @@ class LessonAdmin(admin.ModelAdmin):
     list_filter = ('language', 'tags')
     search_fields = ('title', 'description')
     ordering = ('-created_at',)
- 
+
+class UserProfileAdmin(admin.ModelAdmin):
+    list_display = ('user', 'bio', 'location', 'birth_date')
+    search_fields = ('user__username', 'bio')
+    ordering = ('user',)
+
 admin.site.register(Lesson, LessonAdmin)
 admin.site.register(UserProfile, UserProfileAdmin)
 admin.site.register(Language, LanguageAdmin)
