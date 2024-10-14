@@ -22,6 +22,10 @@ class UserLanguageAdmin(admin.ModelAdmin):
     list_filter = ('fluency_level',)
     search_fields = ('user__username', 'language__name')
 
+class LessonTagAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+    search_fields = ('name',)
+
 admin.site.register(Lesson, LessonAdmin)
 admin.site.register(UserProfile, UserProfileAdmin)
 admin.site.register(Language, LanguageAdmin)
