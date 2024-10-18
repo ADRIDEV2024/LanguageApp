@@ -7,3 +7,5 @@ En este proyecto Django he programado una aplicación web🌐 específica para a
 In this Django project I have programmed a specific web application to learn languages, following the learning path for each user according to the chosen language and its level of difficulty, among other operations, I have used numerous forms each with a unique functionality as well as a robust authentication system and well-structured templates to represent each behavior or event that takes place in the interface.
 
 ECHA UN VISTAZO A LA PÁGINA ➡ [LanguageApp](https://www.LanguageApp.com)
+
+![WEB](https://github.com/user-attachments/assets/86cd1704-c3f0-413b-b682-548509173e8a)
